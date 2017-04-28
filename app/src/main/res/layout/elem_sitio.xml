@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_google_signin_btn_text_dark_default"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_google_signin_btn_text_dark_default">
+
+        <ImageView
+            android:id="@+id/imageViewFoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="false"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:foregroundGravity="center_vertical"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imageViewFoto"
+            android:text="TextView"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvNombre"
+            android:layout_below="@+id/tvNombre"
+            android:text="TextView"
+            android:textColor="?attr/colorAccent" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvDireccion"
+            android:layout_below="@+id/tvNombre"
+            android:layout_marginLeft="14dp"
+            android:layout_toEndOf="@+id/tvRating"
+            android:numStars="5" />
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvRating"
+            android:layout_below="@+id/tvRating"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvOpenNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvDireccion"
+            android:layout_below="@+id/tvDireccion"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvOpenNow"
+            android:layout_below="@+id/tvOpenNow"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvDistance"
+            android:layout_alignBottom="@+id/tvDistance"
+            android:layout_marginLeft="14dp"
+            android:layout_toEndOf="@+id/tvDistance"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        android:orientation="horizontal"></LinearLayout>
+</LinearLayout>

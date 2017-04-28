@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="es.cice.practicapedrogonzalez.DetailActivity">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_light_background"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/galeria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvGaleriaFotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="horizontal" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/cabecera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:scrollbars="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDnombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="14dp"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvDrating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvDnombre"
+                    android:layout_marginLeft="20dp"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarDetalle"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvDrating"
+                    android:layout_marginLeft="14dp"
+                    android:layout_toEndOf="@+id/tvDrating"
+                    android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+                    android:numStars="5"
+                    android:progressTint="@color/common_google_signin_btn_text_dark_default" />
+
+                <TextView
+                    android:id="@+id/tvDdistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvDrating"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+                <TextView
+                    android:id="@+id/tvDduration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ratingBarDetalle"
+                    android:layout_below="@+id/ratingBarDetalle"
+                    android:layout_marginLeft="25dp"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ratingBarDetalle"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/tvDduration"
+                    app:srcCompat="@drawable/ic_directions_walk_white_18dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/enlaces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+                    <ImageView
+                        android:id="@+id/ivWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_earth_grey600_36dp" />
+
+                    <TextView
+                        android:id="@+id/tvDweb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ivWeb"
+                        android:text="WEB" />
+
+                    <ImageView
+                        android:id="@+id/ivMapa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/tvDmapa"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_google_maps_grey600_36dp" />
+
+                    <TextView
+                        android:id="@+id/tvDmapa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/ivMapa"
+                        android:text="@string/mapa"
+                        android:textAllCaps="true" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/separador"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_disabled"
+                android:orientation="horizontal"></LinearLayout>
+
+            <GridLayout
+                android:id="@+id/detalle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="10">
+
+                <ImageView
+                    android:id="@+id/ivDvicinity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="14dp"
+                    android:layout_row="0"
+                    app:srcCompat="@drawable/ic_place_blue_700_24dp" />
+
+                <TextView
+                    android:id="@+id/tvDvicinity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_row="0"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                <ImageView
+                    android:id="@+id/ivDPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="1"
+                    app:srcCompat="@drawable/ic_phone_blue_700_24dp" />
+
+                <TextView
+                    android:id="@+id/tvDphoneNumer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_row="1"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                <ImageView
+                    android:id="@+id/ivDweekday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="2"
+                    app:srcCompat="@drawable/ic_access_time_blue_700_24dp" />
+
+                <TextView
+                    android:id="@+id/tvDopenNow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_row="2"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                <TextView
+                    android:id="@+id/tvDweekday1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="3"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="4"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="5"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="6"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="7"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="8"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDweekday7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_columnWeight="10"
+                    android:layout_marginLeft="20dp"
+                    android:layout_row="9"
+                    android:textSize="12sp" />
+            </GridLayout>
+
+            <LinearLayout
+                android:id="@+id/separador1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/common_google_signin_btn_text_dark_disabled"
+                android:orientation="horizontal"></LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/tituloReviews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvHeaderReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:text="TextView"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/reviews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

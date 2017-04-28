@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivProfilePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <TextView
+            android:id="@+id/tvRnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_toEndOf="@+id/ivProfilePhoto"
+            android:text="TextView"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+        <TextView
+            android:id="@+id/tvRelativeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvRnombre"
+            android:layout_below="@+id/tvRnombre"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/tvRrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvRelativeTime"
+            android:layout_below="@+id/tvRelativeTime"
+            android:text="TextView"
+            android:textColor="?attr/colorAccent" />
+
+        <RatingBar
+            android:id="@+id/ratingBarReview"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvRrating"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/tvRrating" />
+
+        <TextView
+            android:id="@+id/tvRtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvRrating"
+            android:layout_below="@+id/tvRrating"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignStart="@+id/tvRtext"
+            android:layout_below="@+id/tvRtext"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_google_signin_btn_text_dark_disabled"
+            android:text="TextView" />
+    </RelativeLayout>
+
+</LinearLayout>

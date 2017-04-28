@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">miturismo</string>
+    <string name="open">Abierto</string>
+    <string name="closed">Cerrado</string>
+    <string name="reviews">Reseñas</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="tiendas">Tiendas</string>
+    <string name="cultura">Sitios de interés</string>
+    <string name="listado">Listado</string>
+    <string name="mapa">Mapa</string>
+
+    <string name="default_place_text">Seleccione un lugar de incio</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_maps">miturismo</string>
+</resources>

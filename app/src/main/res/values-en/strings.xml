@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mytourism</string>
+    <string name="open">Open</string>
+    <string name="closed">Closed</string>
+    <string name="reviews">Reviews</string>
+    <string name="restaurantes">Restaurants</string>
+    <string name="tiendas">Shopping</string>
+    <string name="cultura">Interesting places</string>
+    <string name="listado">List</string>
+    <string name="mapa">Map</string>
+
+    <string name="default_place_text">Select a place to get started</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_maps">mytourism</string>
+</resources>

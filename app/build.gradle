@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "es.cice.practicapedrogonzalez"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /*
+    buildTypes {
+        debug {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    */
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+
+    //compile 'com.google.android.gms:play-services:10.2.1'
+
+    //compile 'com.google.android.gms:play-services-nearby:10.2.1'
+    //compile 'com.google.android.gms:play-services-cast:10.2.1'
+    //compile 'com.google.android.gms:play-services-plus:10.2.1'
+    //compile 'com.google.android.gms:play-services-awareness:10.2.1'
+    //compile 'com.google.android.gms:play-services-gcm:10.2.1'
+    //compile 'com.google.android.gms:play-services-drive:10.2.1'
+    //compile 'com.google.android.gms:play-services-fitness:10.2.1'
+    //compile 'com.google.android.gms:play-services-ads:10.2.1'
+    //compile 'com.google.android.gms:play-services-vision:10.2.1'
+    //compile 'com.google.android.gms:play-services-panorama:10.2.1'
+    //compile 'com.google.android.gms:play-services-games:10.2.1'
+    //compile 'com.google.android.gms:play-services-safetynet:10.2.1'
+    //compile 'com.google.android.gms:play-services-wallet:10.2.1'
+    //compile 'com.google.api-client:google-api-client:1.22.0'
+    //compile 'com.google.api-client:google-api-client-android:1.22.0'
+
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-analytics:10.2.1'
+    compile 'com.google.android.gms:play-services-location:10.2.1'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
+    compile 'com.google.android.gms:play-services-places:10.2.1'
+    compile 'com.google.android.gms:play-services-base:10.2.1'
+    compile 'com.google.android.gms:play-services-auth:10.2.1'
+    compile 'com.google.android.gms:play-services-identity:10.2.1'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+}
